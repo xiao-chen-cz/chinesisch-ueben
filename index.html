@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><script type='text/javascript' src='https://ppl-ai-code-interpreter-files.s3.amazonaws.com/Nq934_Od-AjnJyFWypPHZttnu0BqF-x82NaONeH9kht4K5t2Licxv1Lc6yNIfYsKVaTMB7aAE5O6BhTp3powgw=='></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinesische Zeichen Arbeitsblatt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇨🇳 中文练习 - Arbeitsblatt Generator</h1>
+            <p>Chinesisches Zeichen eingeben für Schreibübung</p>
+            
+            <div class="input-group">
+                <input type="text" id="charInput" class="character-input" placeholder="学" maxlength="1">
+                <button id="generateBtn" class="btn">📝 Arbeitsblatt erstellen</button>
+                <button id="printBtn" class="btn hidden">🖨️ PDF generieren</button>
+            </div>
+            
+            <div id="errorMsg" class="error hidden"></div>
+        </div>
+
+        <div id="worksheet" class="worksheet hidden">
+            <div class="char-header">
+                <div id="charDisplay" class="char-display"></div>
+                <div id="pinyinDisplay" class="pinyin"></div>
+                <div class="meanings">
+                    <div id="meaningDe" class="meaning-de"></div>
+                    <div id="meaningEn" class="meaning-en"></div>
+                </div>
+                <div class="char-stats">
+                    <span id="strokeCount" class="stat-badge"></span>
+                    <span id="hskLevel" class="stat-badge"></span>
+                </div>
+            </div>
+
+            <div class="practice-section">
+                <h2>✏️ Schreibübung</h2>
+                <div id="practiceGrid" class="practice-grid"></div>
+            </div>
+
+            <div class="words-section">
+                <h2>📚 Wörter mit diesem Zeichen</h2>
+                <div id="wordsGrid" class="words-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
